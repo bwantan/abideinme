@@ -1,0 +1,40 @@
+{
+    "MENU": {
+        "Title": "Memory Verse",
+        "Verses": "Verses",
+        "Account": "Account",
+        "Settings": "Settings",
+        "Help": "Help",
+        "About": "About"
+
+    },
+    "VERSE_LIST": {
+        "1": "Favourite",
+        "2": "New",
+        "3": "Due",
+        "4": "Known",
+        "5": "All",
+        "6": "Edit",
+        "7": "Done",
+        "8": "More...",
+        "9": "Change to List Display",
+        "10": "Change to Card Display",
+        "11": "Cancel"
+    },
+    "ADD_NEW": {
+        "1": "Add New",
+        "2": "Save",
+        "3": "eg. John 3:16-17",
+        "4": "You can search and add multiple verses to the list. Once you have confirmed all the new verses,tap [Save] button to save them to your verse list.",
+        "5": "All",
+        "6": "Edit",
+        "7": "Done",
+        "8": "More...",
+        "9": "Change to List Display",
+        "10": "Change to Card Display",
+        "11": "Cancel"
+    },
+    "VERSE": {
+        "1": "Add New"
+    }
+}

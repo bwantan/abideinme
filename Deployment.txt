@@ -1,0 +1,18 @@
+cordova build --release android
+
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore /Users/bwantan/Documents/SourceCode/Projects/abideinme/Deployment/abideinme.keystore /Users/bwantan/Documents/SourceCode/Projects/abideinme/platforms/android/build/outputs/apk/android-x86-release-unsigned.apk abide
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore /Users/bwantan/Documents/SourceCode/Projects/abideinme/Deployment/abideinme.keystore /Users/bwantan/Documents/SourceCode/Projects/abideinme/platforms/android/build/outputs/apk/android-armv7-release-unsigned.apk abide
+
+rm /Users/bwantan/Documents/SourceCode/Projects/abideinme/Deployment/AbideInME_86.apk
+rm /Users/bwantan/Documents/SourceCode/Projects/abideinme/Deployment/AbideInME_armv7.apk
+
+/Users/bwantan/Documents/SourceCode/Projects/dTraffic/deployment/zipalign -v 4 /Users/bwantan/Documents/SourceCode/Projects/abideinme/platforms/android/build/outputs/apk/android-x86-release-unsigned.apk /Users/bwantan/Documents/SourceCode/Projects/abideinme/Deployment/AbideInME_86.apk
+/Users/bwantan/Documents/SourceCode/Projects/dTraffic/deployment/zipalign -v 4 /Users/bwantan/Documents/SourceCode/Projects/abideinme/platforms/android/build/outputs/apk/android-armv7-release-unsigned.apk /Users/bwantan/Documents/SourceCode/Projects/abideinme/Deployment/AbideInME_armv7.apk
+
+
+video: IOS 6 plus:
+/Users/bwantan/Documents/SourceCode/Projects/abideinme/Deployment/Video/ffmpeg -i /Users/bwantan/Documents/SourceCode/Projects/abideinme/Deployment/Video/preview.mp4 -acodec copy -crf 12 -vf scale=1080:1920,setsar=1:1 6plus.mp4
+
+ipad:
+/Users/bwantan/Documents/SourceCode/Projects/abideinme/Deployment/Video/ffmpeg -i /Users/bwantan/Documents/SourceCode/Projects/abideinme/Deployment/Video/preview.mp4 -acodec copy -crf 12 -vf scale=900:1200,setsar=1:1 ipad.mp4
+/Users/bwantan/Documents/SourceCode/Projects/abideinme/Deployment/Video/ffmpeg -i /Users/bwantan/Documents/SourceCode/Projects/abideinme/Deployment/Video/preview.mp4  -strict -2 -vf scale=900:1200 ipad.mp4

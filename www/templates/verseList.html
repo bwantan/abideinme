@@ -1,0 +1,434 @@
+<ion-view cache-view="false"  ng-init="init()" ng-controller="verseListCtrl">
+  <ion-nav-title>
+    <i class='icon ion-ios-book'></i> {{ "MENU.Verses" | translate }}
+  </ion-nav-title>
+  <ion-nav-buttons side="left">
+    <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+    </button>
+    <span class="padding"></span>
+    <button class="button button-icon button-clear button-small ion-ios-help-outline" on-tap="videoHelp()"></button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <!--<button class="button button-icon button-clear" on-tap="editMode()">{{ editText }}-->
+    <!--</button>-->
+    <button class="button button-icon button-clear ion-ios-gear-outline" on-tap="changeFont($event)">
+    </button>
+  </ion-nav-buttons>
+  <ion-header-bar class="bar-light bar-subheader item-input-inset">
+    <label class="item-input-wrapper">
+      <i class="icon ion-ios-search placeholder-icon"></i>
+      <input type="text" autocorrect="off" ng-focus="searchFocused = true"
+             ng-blur="true" placeholder="{{ 'VERSE_LIST.8' | translate }}" id="searchtext" autocomplete="off" ng-model="searchtext">
+    </label>
+    <span class="item-note padding-right"></span>
+    <div class="buttons">
+      <button ng-show="searchtext" class="button button-clear button-positive button-small" on-tap="searchtext=''">
+        <i class="icon ion-ios-close-outline"></i>
+      </button>
+    </div>
+  </ion-header-bar>
+  <ion-content scroll="false">
+    <ion-tabs delegate-handle="verses" class="tabs-stable tabs-icon-bottom" ng-class="!edit ? 'tabs-light tabs-icon-bottom':'tabs-light tabs-icon-bottom tabs-item-hide'">
+      <ion-tab title="{{ 'VERSE_LIST.2' | translate }}" icon-on="ion-ios-plus positive" icon-off="ion-ios-plus-outline dark" badge="(allVerses | filter:{ status: 1 }).length" badge-style="badge-dark">
+        <ion-content delegate-handle="0" has-bouncing="true" overflow:auto>
+          <ion-list ng-if="settings.cardDisplay" delegate-handle="verseHandle">
+            <div class="item-card" style="border:0px">
+              <div class="card" ng-repeat="verse in allVerses | filter:{ status: 1 } | filter:searchtext:strict | orderBy:'date':reverse track by $index">
+                <div class="item item-divider" >
+                  <table style="width:100%">
+                    <tr>
+                      <td style="text-align: left;width: 70%;">
+                        {{ verse.reference }} <span style="font-weight: normal;font-size:10px; font-style: italic">({{ "VERSE_LIST.14" | translate }}: {{ verse.version }})</span>
+                      </td>
+                      <td style="text-align: right;">
+                        <a on-touch="deleteVerse(verse, $index, $event);">
+                          <i class="icon ion-minus-circled button-assertive button button-clear button-small" style="font-size:20px"></i>
+                        </a>
+                      </td>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="item item-text-wrap" ng-bind-html="verse.passage" style="line-height: 110%;font-size:{{ settings.fontSize }}px">
+                </div>
+                <div class="item tabs tabs-secondary tabs-icon-left">
+                  <a class="tab-item positive" href="#">
+                    <button class="button button-stable button-icon button-clear">
+                      <i class="ion-arrow-left-a" style="font-size: x-large"></i>
+                    </button>
+                    <button class="button button-positive button-icon button-clear " on-tap="changeStatus(verse, 2)">
+                      <i class="ion-arrow-right-a" style="font-size: x-large"></i>
+                    </button>
+                  </a>
+                  <a class="tab-item positive" href="#" on-tap="likeVerse(verse)">
+                    <i ng-class="verse.like ? 'icon balance ion-ios-heart':'icon balance ion-ios-heart-outline'"></i>
+                  </a>
+                  <a class="tab-item positive" href="#" on-tap="cardMore(verse)">
+                    <i class="icon balance ion-ios-more"></i>
+                    {{ 'VERSE_LIST.10' | translate }}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </ion-list>
+          <ion-list ng-if="!settings.cardDisplay" can-swipe="!edit" ng-if="list">
+            <ion-item ng-class="edit ? 'item item-checkbox' : 'item'"
+                      ng-repeat="verse in allVerses | filter:{ status: 1 } | filter:searchtext:strict | orderBy:'date':reverse track by $index"
+                      style="line-height: 110%;font-size:{{ settings.fontSize }}px" can-swipe="!edit"
+                      on-tap="showDetail(verse)">
+              <label ng-if="edit" class="checkbox">
+                <input type="checkbox" >
+              </label>
+              <span ng-class="edit ? 'item-radio-content' : ''">
+                {{ verse.reference }}
+              </span>
+              <span class="item-note">
+                <div >{{ verse.version }}</div>
+              </span>
+              <ion-option-button class="button-positive"
+                                 on-tap="deleteVerse(verse, $index, $event);">
+                {{ 'VERSE_LIST.9' | translate }}
+              </ion-option-button>
+              <ion-option-button class="button"
+                                 on-tap="more(verse, $event);">
+                {{ 'VERSE_LIST.10' | translate }}
+              </ion-option-button>
+            </ion-item>
+          </ion-list>
+        </ion-content>
+      </ion-tab>
+      <ion-tab title="{{ 'VERSE_LIST.3' | translate }}" icon-on="ion-ios-clock positive" icon-off="ion-ios-clock-outline dark" badge="(allVerses | filter:{ status: 2 }).length" badge-style="badge-dark">
+        <ion-content delegate-handle="1" has-bouncing="true" overflow:auto>
+          <ion-list ng-if="settings.cardDisplay" delegate-handle="verseHandle">
+            <div class="item-card" style="border:0px">
+              <div class="card" ng-repeat="verse in allVerses | filter:{ status: 2 } | filter:searchtext:strict | orderBy:'date':reverse track by $index">
+                <div class="item item-divider" >
+                  <table style="width:100%">
+                    <tr>
+                      <td style="text-align: left;width: 70%;">
+                        {{ verse.reference }} <span style="font-weight: normal;font-size:10px; font-style: italic">({{ "VERSE_LIST.14" | translate }}: {{ verse.version }}) - <b>{{ showDueDate(verse.dueDate) }}</b></span>
+                      </td>
+                      <td style="text-align: right;">
+                        <a on-touch="deleteVerse(verse, $index, $event);">
+                          <i class="icon ion-minus-circled button-assertive button button-clear button-small" style="font-size:20px"></i>
+                        </a>
+                      </td>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="item item-text-wrap" ng-bind-html="verse.passage" style="line-height: 110%;font-size:{{ settings.fontSize }}px">
+                </div>
+                <div class="item tabs tabs-secondary tabs-icon-left">
+                  <a class="tab-item positive" href="#">
+                    <button class="button button-positive button-icon button-clear" on-tap="changeStatus(verse, 1)">
+                      <i class="ion-arrow-left-a" style="font-size: x-large"></i>
+                    </button>
+                    <span class="padding"></span>
+                    <button class="button button-positive button-icon button-clear" on-tap="changeStatus(verse, 3)">
+                      <i class="ion-arrow-right-a" style="font-size: x-large"></i>
+                    </button>
+                  </a>
+                  <a class="tab-item positive" href="#" on-tap="likeVerse(verse)">
+                    <i ng-class="verse.like ? 'icon balance ion-ios-heart':'icon balance ion-ios-heart-outline'"></i>
+                  </a>
+                  <a class="tab-item positive" href="#" on-tap="cardMore(verse)">
+                    <i class="icon balance ion-ios-more"></i>
+                    {{ 'VERSE_LIST.10' | translate }}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </ion-list>
+          <ion-list ng-if="!settings.cardDisplay" can-swipe="!edit" ng-if="list">
+            <ion-item ng-class="edit ? 'item item-checkbox' : 'item'"
+                      ng-repeat="verse in allVerses | filter:{ status: 2 } | filter:searchtext:strict | orderBy:'date':reverse track by $index"
+                      style="line-height: 110%;font-size:{{ settings.fontSize }}px" can-swipe="!edit" on-tap="showDetail(verse)">
+              <label ng-if="edit" class="checkbox">
+                <input type="checkbox" ng-model="verse.checked">
+              </label>
+              <span ng-class="edit ? 'item-radio-content' : ''">
+                {{ verse.reference }}
+              </span>
+              <span class="item-note" style="height: 15px">
+                <table>
+                  <tr>
+                    <td>
+                      {{ verse.version }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      {{ showDueDate(verse.dueDate) }}
+                    </td>
+                  </tr>
+                </table>
+              </span>
+              <ion-option-button class="button-positive"
+                  on-tap="deleteVerse(verse, $index, $event);">
+                {{ 'VERSE_LIST.9' | translate }}
+              </ion-option-button>
+              <ion-option-button class="button-info"
+                                 on-tap="more(verse, $event)">
+                {{ 'VERSE_LIST.10' | translate }}
+              </ion-option-button>
+            </ion-item>
+          </ion-list>
+        </ion-content>
+      </ion-tab>
+      <ion-tab title="{{ 'VERSE_LIST.4' | translate }}" icon-on="ion-ios-checkmark positive" icon-off="ion-ios-checkmark-outline dark" badge="(allVerses | filter:{ status: 3 }).length" badge-style="badge-dark">
+        <ion-content delegate-handle="2" has-bouncing="true" overflow:auto>
+          <ion-list ng-if="settings.cardDisplay" delegate-handle="verseHandle">
+            <div class="item-card" style="border:0px">
+              <div class="card" ng-repeat="verse in allVerses | filter:{ status: 3 } | filter:searchtext:strict | orderBy:'date':reverse track by $index">
+                <div class="item item-divider" >
+                  <table style="width:100%">
+                    <tr>
+                      <td style="text-align: left;width: 70%;">
+                        {{ verse.reference }} <span style="font-weight: normal;font-size:10px; font-style: italic">({{ "VERSE_LIST.14" | translate }}: {{ verse.version }}) - <b>{{ showDueDate(verse.dueDate) }}</b></span>
+                      </td>
+                      <td style="text-align: right;">
+                        <a on-touch="deleteVerse(verse, $index, $event);">
+                          <i class="icon ion-minus-circled button-assertive button button-clear button-small" style="font-size:20px"></i>
+                        </a>
+                      </td>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="item item-text-wrap" ng-bind-html="verse.passage" style="line-height: 110%;font-size:{{ settings.fontSize }}px">
+                </div>
+                <div class="item tabs tabs-secondary tabs-icon-left">
+                  <a class="tab-item positive" href="#">
+                    <button class="button button-positive button-icon button-clear" on-tap="changeStatus(verse, 2)">
+                      <i class="ion-arrow-left-a" style="font-size: x-large"></i>
+                    </button>
+                    <button class="button button-stable button-icon button-clear">
+                      <i class="ion-arrow-right-a" style="font-size: x-large"></i>
+                    </button>
+                    <span class="padding"></span>
+                    <button class="button button-positive button-icon button-clear">
+                    </button>
+                  </a>
+                  <a class="tab-item positive" href="#" on-tap="likeVerse(verse)">
+                    <i ng-class="verse.like ? 'icon balance ion-ios-heart':'icon balance ion-ios-heart-outline'"></i>
+                  </a>
+                  <a class="tab-item positive" href="#" on-tap="cardMore(verse)">
+                    <i class="icon balance ion-ios-more"></i>
+                    {{ 'VERSE_LIST.10' | translate }}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </ion-list>
+          <ion-list ng-if="!settings.cardDisplay" can-swipe="!edit" ng-if="list">
+            <ion-item ng-class="edit ? 'item item-checkbox' : 'item'"
+                      ng-repeat="verse in allVerses | filter:{ status: 3 } | filter:searchtext:strict | orderBy:'date':reverse track by $index"
+                      style="line-height: 110%;font-size:{{ settings.fontSize }}px" can-swipe="!edit" on-tap="showDetail(verse)">
+              <label ng-if="edit" class="checkbox">
+                <input type="checkbox">
+              </label>
+              <span ng-class="edit ? 'item-radio-content' : ''">
+                {{ verse.reference }}
+              </span>
+              <span class="item-note" style="height: 15px">
+                <table>
+                  <tr>
+                    <td>
+                      {{ verse.version }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      {{ showDueDate(verse.dueDate) }}
+                    </td>
+                  </tr>
+                </table>
+              </span>
+              <ion-option-button class="button-positive"
+                                 on-tap="deleteVerse(verse, $index, $event);">
+                {{ 'VERSE_LIST.9' | translate }}
+              </ion-option-button>
+              </a>
+              <ion-option-button class="button-info"
+                                 on-tap="more(verse, $event)">
+                {{ 'VERSE_LIST.10' | translate }}
+              </ion-option-button>
+            </ion-item>
+          </ion-list>
+        </ion-content>
+      </ion-tab>
+      <ion-tab title="{{ 'VERSE_LIST.5' | translate }}" icon-on="ion-ios-list positive" icon-off="ion-ios-list-outline dark" badge="(allVerses).length" badge-style="badge-dark">
+        <ion-content delegate-handle="3" has-bouncing="true" overflow:auto>
+          <ion-list ng-if="settings.cardDisplay" delegate-handle="verseHandle">
+            <div class="item-card" style="border:0px">
+              <div class="card" ng-repeat="verse in allVerses | filter:searchtext:strict | orderBy:'date':reverse track by $index">
+                <div class="item item-divider" >
+                  <table style="width:100%">
+                    <tr>
+                      <td style="text-align: left;width: 70%;">
+                        {{ verse.reference }} <span style="font-weight: normal;font-size:10px; font-style: italic">({{ "VERSE_LIST.14" | translate }}: {{ verse.version }}) - <b>{{ showDueDate(verse.dueDate) }}</b></span>
+                      </td>
+                      <td style="text-align: right;">
+                        <a on-touch="deleteVerse(verse, $index, $event);">
+                          <i class="icon ion-minus-circled button-assertive button button-clear button-small" style="font-size:20px"></i>
+                        </a>
+                      </td>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="item item-text-wrap" ng-bind-html="verse.passage" style="line-height: 110%;font-size:{{ settings.fontSize }}px">
+                </div>
+                <div class="item tabs tabs-secondary tabs-icon-left">
+                  <a class="tab-item positive" href="#">
+                    <button ng-class="(verse.status == 2) || (verse.status == 3) ? 'button button-positive button-icon button-clear':'button button-stable button-icon button-clear'" on-tap="changeStatusAll(verse, verse.status-1, (verse.status == 2) || (verse.status == 3))">
+                      <i class="ion-arrow-left-a" style="font-size: x-large"></i>
+                    </button>
+                    <span class="padding"></span>
+                    <button ng-class="(verse.status == 1) || (verse.status == 2) ? 'button button-positive button-icon button-clear':'button button-stable button-icon button-clear'" on-tap="changeStatusAll(verse, verse.status+1, ((verse.status == 1) || (verse.status == 2)))">
+                      <i class="ion-arrow-right-a" style="font-size: x-large"></i>
+                    </button>
+                  </a>
+                  <a class="tab-item positive" href="#" on-tap="likeVerse(verse)">
+                    <i ng-class="verse.like ? 'icon balance ion-ios-heart':'icon balance ion-ios-heart-outline'"></i>
+                  </a>
+                  <a class="tab-item positive" href="#" on-tap="cardMore(verse)">
+                    <i class="icon balance ion-ios-more"></i>
+                    {{ 'VERSE_LIST.10' | translate }}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </ion-list>
+          <ion-list ng-if="!settings.cardDisplay" can-swipe="!edit" ng-if="list">
+            <ion-item ng-class="edit ? 'item item-checkbox' : 'item'"
+                      ng-repeat="verse in allVerses | filter:searchtext:strict track by $index"
+                      style="line-height: 110%;font-size:{{ settings.fontSize }}px" can-swipe="!edit" on-tap="showDetail(verse)">
+              <label ng-if="edit" class="checkbox">
+                <input type="checkbox">
+              </label>
+              <span ng-class="edit ? 'item-radio-content' : ''">
+                {{ verse.reference }}
+              </span>
+              <span class="item-note" style="height: 15px">
+                <table>
+                  <tr>
+                    <td>
+                      {{ verse.version }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      {{ showDueDate(verse.dueDate) }}
+                    </td>
+                  </tr>
+                </table>
+              </span>
+              <ion-option-button class="button-positive"
+                                 on-tap="deleteVerse(verse, $index, $event);">
+                {{ 'VERSE_LIST.9' | translate }}
+              </ion-option-button>
+              <ion-option-button class="button-info"
+                                 on-tap="more(verse, $event)">
+                {{ 'VERSE_LIST.10' | translate }}
+              </ion-option-button>
+            </ion-item>
+          </ion-list>
+        </ion-content>
+      </ion-tab>
+      <ion-tab title="{{ 'VERSE_LIST.1' | translate }}" icon-on="ion-ios-heart positive" icon-off="ion-ios-heart-outline dark" badge="(allVerses | filter:{ like: true }).length" badge-style="badge-dark">
+        <ion-content delegate-handle="4" has-bouncing="true" overflow:auto>
+          <ion-list ng-if="settings.cardDisplay" delegate-handle="verseHandle">
+            <div class="item-card" style="border:0px">
+              <div class="card" ng-repeat="verse in allVerses | filter:{ like: true } | filter:searchtext:strict | orderBy:'date':reverse track by $index">
+                <div class="item item-divider" >
+                  <table style="width:100%">
+                    <tr>
+                      <td style="text-align: left;width: 70%;">
+                        {{ verse.reference }} <span style="font-weight: normal;font-size:10px; font-style: italic">({{ "VERSE_LIST.14" | translate }}: {{ verse.version }})</span>
+                      </td>
+                      <td style="text-align: right;">
+                        <a on-touch="deleteVerse(verse, $index, $event);">
+                          <i class="icon ion-minus-circled button-assertive button button-clear button-small" style="font-size:20px"></i>
+                        </a>
+                      </td>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="item item-text-wrap" ng-bind-html="verse.passage" style="line-height: 110%;font-size:{{ settings.fontSize }}px">
+                </div>
+                <div class="item tabs tabs-secondary tabs-icon-left">
+                  <a class="tab-item positive" href="#" on-tap="likeVerse(verse)">
+                    <i ng-class="verse.like ? 'icon balance ion-ios-heart':'icon balance ion-ios-heart-outline'"></i>
+                  </a>
+                  <a class="tab-item positive" href="#" on-tap="cardMore(verse)">
+                    <i class="icon balance ion-ios-more"></i>
+                    {{ 'VERSE_LIST.10' | translate }}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </ion-list>
+          <ion-list ng-if="!settings.cardDisplay" can-swipe="!edit" ng-if="list">
+            <ion-item ng-class="edit ? 'item item-checkbox' : 'item'"
+                      ng-repeat="verse in allVerses | filter:{ like: true } | filter:searchtext:strict | orderBy:'date':reverse track by $index"
+                      style="line-height: 110%;font-size:{{ settings.fontSize }}px" can-swipe="!edit" on-tap="showDetail(verse)">
+              <label ng-if="edit" class="checkbox">
+                <input type="checkbox">
+              </label>
+              <span ng-class="edit ? 'item-radio-content' : ''">
+                {{ verse.reference }}
+              </span>
+              <span class="item-note">
+                <div >{{ verse.version }}</div>
+              </span>
+              <ion-option-button class="button-positive"
+                                 on-tap="deleteVerse(verse, $index, $event);">
+                {{ 'VERSE_LIST.9' | translate }}
+              </ion-option-button>
+              <ion-option-button class="button-info"
+                                 on-tap="more(verse, $event)">
+                {{ 'VERSE_LIST.10' | translate }}
+              </ion-option-button>
+            </ion-item>
+          </ion-list>
+        </ion-content>
+      </ion-tab>
+    </ion-tabs>
+  </ion-content>
+  <ion-footer-bar class="bar-light" ng-if="edit == true">
+    <div class="buttons">
+      <button class="button button-positive button-icon button-clear ion-arrow-left-a" on-tap="changeSelectedStatus(1)">
+      </button>
+      <button class="button button-positive button-icon button-clear ion-arrow-right-a" on-tap="changeSelectedStatus(2)">
+      </button>
+    </div>
+
+    <div class="title"></div>
+    <div class="buttons">
+      <button class="button button-positive button-icon button-clear ion-ios-trash-outline">
+      </button>
+    </div>
+  </ion-footer-bar>
+  <div class="speed-dial padding">
+      <table>
+        <tr>
+          <td>
+            <button class="button round_image button icon button-calm ion-ios-plus-empty icon-positive" on-tap="addVerse()"></button>
+          </td>
+        </tr>
+        <tr height="10px">
+          <td>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="button round_image button icon button-calm ion-ios-albums-outline" on-tap="flashCard()"></button>
+          </td>
+        </tr>
+      </table>
+  </div>
+</ion-view>

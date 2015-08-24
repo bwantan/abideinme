@@ -1,0 +1,59 @@
+<ion-view view-title="Add New" ng-init="init()" ng-controller="verseCtrl" can-swipe-back="true">
+  <ion-nav-title>
+    {{ verse.reference }}
+  </ion-nav-title>
+  <ion-nav-buttons side="right">
+  </ion-nav-buttons>
+  <ion-header-bar class="bar-subheader">
+  <div class="buttons">
+      <button class="button button-stable button-icon button-clear" ng-class="(verse.status == 2) || (verse.status == 3) ? 'button button-positive button-icon button-clear':'button button-stable button-icon button-clear'" on-tap="changeStatusAll(verse, verse.status-1, (verse.status == 2) || (verse.status == 3))">
+      <i class="ion-arrow-left-a" style="font-size: x-large"></i>
+    </button>
+    <span class="padding"></span>
+    <button class="button button-stable button-icon button-clear" ng-class="(verse.status == 1) || (verse.status == 2) ? 'button button-positive button-icon button-clear':'button button-stable button-icon button-clear'" on-tap="changeStatusAll(verse, verse.status+1, ((verse.status == 1) || (verse.status == 2)))">
+      <i class="ion-arrow-right-a" style="font-size: x-large"></i>
+    </button>
+  </div>
+  <div class="title centerButtons">
+
+  </div>
+  <div class="buttons">
+  <span class="padding"></span>
+
+  </div>
+  </ion-header-bar>
+  <ion-content>
+    <div class="list">
+      <label class="item item-input item-stacked-label">
+      <span class="input-label">
+      <span style="font-weight: normal;font-size:10px; font-style: italic">({{ "VERSE_LIST.14" | translate }}: {{ verse.version }})</span>
+      </span>
+      <span class="item-note padding"></span>
+      <div on-hold="selectVerse()" ng-class="!verseSelected ? 'item-text-wrap padding-right':'item-text-wrap padding-right selected'" ng-bind-html="verse.passage" style="font-size:{{ settings.fontSize }}px">
+      </div>
+      </label>
+    </div>
+  </ion-content>
+  <ion-footer-bar class="bar-light" keyboard-attach>
+    <table width="100%">
+    <tr>
+    <td width="15%" align="left">
+      <button class="button button-icon button-clear ion-share button-positive" on-tap="share(verse)">
+      </button>
+    </td><td width="15%" align="left">
+
+    </button>
+    </td><td width="40%" align="center">
+    <button class="button button-small button-outline button-positive" on-tap="vewChapter()">{{ "VERSE.1" | translate }}</button>
+
+    </td><td width="15%" align="right">
+
+    </td><td width="15%" align="right">
+      <button class="button button-clear button-positive" on-tap="likeVerse(verse)">
+        <i ng-class="verse.like ? 'icon balance ion-ios-heart':'icon balance ion-ios-heart-outline'"></i>
+      </button>
+    </td>
+    </tr>
+    </table>
+  </ion-footer-bar>
+</ion-view>

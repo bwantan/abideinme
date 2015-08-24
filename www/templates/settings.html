@@ -1,0 +1,74 @@
+<ion-view ng-init="init()" ng-controller="settingsCtrl">
+  <ion-nav-title>
+    <i class='icon ion-ios-gear-outline'></i> {{ "MENU.Settings" | translate }}
+  </ion-nav-title>
+  <ion-nav-buttons side="right">
+    <button class="button button-icon button-clear " on-tap="default()">{{ "MENU.Default" | translate }}
+    </button>
+  </ion-nav-buttons>
+  <ion-content>
+    <div class="list">
+      <div class="item item-divider">
+        {{ "SETTINGS.5" | translate }}
+      </div>
+      <label class="item item-input item-select">
+        <div class="input-label">
+          {{ "SETTINGS.6" | translate }}
+          <p style="padding-top:5px;font-weight: normal;font-size:10px; font-style: italic">{{ "SETTINGS.7" | translate }}</p>
+        </div>
+        <select ng-model="settings.stage1" ng-change="stageChange()">
+          <option ng-selected="{{settings.stage1 == day.value}}" ng-repeat="day in days" ng-selected="" value="{{day.value}}">{{day.value}}</option>
+        </select>
+      </label>
+      <label class="item item-input item-select">
+        <div class="input-label">
+          {{ "SETTINGS.8" | translate }}
+          <p style="padding-top:5px;font-weight: normal;font-size:10px; font-style: italic">{{ "SETTINGS.9" | translate }}</p>
+        </div>
+        <select ng-model="settings.stage2" ng-change="stageChange()">
+          <option ng-selected="{{settings.stage2 == day.value}}" ng-repeat="day in days" ng-selected="" value="{{day.value}}">{{day.value}}</option>
+        </select>
+      </label>
+      <div class="item item-divider">
+        {{ "SETTINGS.10" | translate }}
+      </div>
+      <label class="item" on-tap="selectLanguage()">
+        <table width="100%">
+          <tr>
+            <td width="50%">
+              {{ "SETTINGS.1" | translate }}
+            </td>
+            <td align="right">
+              <div>
+                {{ settings.language.text }}
+                <i class="ion-arrow-down-b"></i>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </label>
+      <label class="item" on-tap="selectBible()">
+        <table width="100%">
+          <tr>
+            <td width="50%">
+              {{ "SETTINGS.2" | translate }}
+            </td>
+            <td align="right">
+              <div>
+                {{ settings.bibleVersion }}
+                <i class="ion-arrow-down-b"></i>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </label>
+      <ion-toggle ng-model="settings.cardDisplay" toggle-class="toggle-balance">{{ "SETTINGS.3" | translate }}</ion-toggle>
+      <div class="item range range-dark">
+        &nbsp;{{ "SETTINGS.4" | translate }}
+        <input type="range" name="volume" min="16" max="40" value="18" step="2" ng-model="settings.fontSize">
+        <i>{{ settings.fontSize }}pt</i>
+      </div>
+      </label>
+    </div>
+  </ion-content>
+</ion-view>

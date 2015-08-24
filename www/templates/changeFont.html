@@ -1,0 +1,21 @@
+<ion-popover-view style="width:90%" ng-init="init()" ng-controller="settingsCtrl">
+  <ion-content scroll="false">
+    <div class="list">
+      <div class="item range range-dark">
+        <i>{{ "CHANGE_FONT.1" | translate }}</i>
+        <input type="range" name="volume" min="16" max="40" value="18" step="2" ng-model="settings.fontSize">
+        <i>{{ settings.fontSize }}pt</i>
+      </div>
+      <ion-toggle ng-model="settings.cardDisplay" toggle-class="toggle-balance">{{ "CHANGE_FONT.2" | translate }}</ion-toggle>
+    </div>
+  </ion-content>
+  <ion-footer-bar class="bar-light">
+    <div class="buttons">
+    </div>
+    <div class="title"></div>
+    <div class="buttons">
+      <button class="button button-clear button-positive" on-tap="default()">{{ "CHANGE_FONT.3" | translate }}
+      </button>
+    </div>
+  </ion-footer-bar>
+</ion-popover-view>

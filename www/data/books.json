@@ -1,0 +1,1864 @@
+{
+  "en": [
+    {
+      "id": "gn",
+      "name" : "Genesis"
+    },
+    {
+      "id": "ex",
+      "name" : "Exodus"
+    },
+    {
+      "id": "lv",
+      "name" : "Leviticus"
+    },
+    {
+      "id": "nm",
+      "name" : "Numbers"
+    },
+    {
+      "id": "dt",
+      "name" : "Deuteronomy"
+    },
+    {
+      "id": "js",
+      "name" : "Joshua"
+    },
+    {
+      "id": "judg",
+      "name" : "Judges"
+    },
+    {
+      "id": "ru",
+      "name" : "Ruth"
+    },
+    {
+      "id": "1 sm",
+      "name" : "1 Samuel"
+    },
+    {
+      "id": "2 sm",
+      "name" : "2 Samuel"
+    },
+    {
+      "id": "1 kgs",
+      "name" : "1 Kings"
+    },
+    {
+      "id": "2 kgs",
+      "name" : "2 Kings"
+    },
+    {
+      "id": "1 chr",
+      "name" : "1 Chronicles"
+    },
+    {
+      "id": "2 chr",
+      "name" : "2 Chronicles"
+    },
+    {
+      "id": "ezr",
+      "name" : "Ezra"
+    },
+    {
+      "id": "neh",
+      "name" : "Nehemiah"
+    },
+    {
+      "id": "est",
+      "name" : "Esther"
+    },
+    {
+      "id": "jb",
+      "name" : "Job"
+    },
+    {
+      "id": "ps",
+      "name" : "Psalms"
+    },
+    {
+      "id": "pv",
+      "name" : "Proverbs"
+    },
+    {
+      "id": "eccl",
+      "name" : "Ecclesiastes"
+    },
+    {
+      "id": "sng",
+      "name" : "Song of Solomon"
+    },
+    {
+      "id": "is",
+      "name" : "Isaiah"
+    },
+    {
+      "id": "jer",
+      "name" : "Jeremiah"
+    },
+    {
+      "id": "lam",
+      "name" : "Lamentations"
+    },
+    {
+      "id": "ezek",
+      "name" : "Ezekiel"
+    },
+    {
+      "id": "dan",
+      "name" : "Daniel"
+    },
+    {
+      "id": "hos",
+      "name" : "Hosea"
+    },
+    {
+      "id": "jl",
+      "name" : "Joel"
+    },
+    {
+      "id": "am",
+      "name" : "Amos"
+    },
+    {
+      "id": "ob",
+      "name" : "Obadiah"
+    },
+    {
+      "id": "jon",
+      "name" : "Jonah"
+    },
+    {
+      "id": "mi",
+      "name" : "Micah"
+    },
+    {
+      "id": "na",
+      "name" : "Nahum"
+    },
+    {
+      "id": "hab",
+      "name" : "Habakkuk"
+    },
+    {
+      "id": "zep",
+      "name" : "Zephaniah"
+    },
+    {
+      "id": "hg",
+      "name" : "Haggai"
+    },
+    {
+      "id": "zec",
+      "name" : "Zechariah"
+    },
+    {
+      "id": "mal",
+      "name" : "Malachi"
+    },
+    {
+      "id": "mt",
+      "name" : "Matthew"
+    },
+    {
+      "id": "mk",
+      "name" : "Mark"
+    },
+    {
+      "id": "lk",
+      "name" : "Luke"
+    },
+    {
+      "id": "jhn",
+      "name" : "John"
+    },
+    {
+      "id": "Acts",
+      "name" : "Acts"
+    },
+    {
+      "id": "rom",
+      "name" : "Romans"
+    },
+    {
+      "id": "1 cor",
+      "name" : "1 Corinthians"
+    },
+    {
+      "id": "2 cor",
+      "name" : "2 Corinthians"
+    },
+    {
+      "id": "gal",
+      "name" : "Galatians"
+    },
+    {
+      "id": "eph",
+      "name" : "Ephesians"
+    },
+    {
+      "id": "phil",
+      "name" : "Philippians"
+    },
+    {
+      "id": "col",
+      "name" : "Colossians"
+    },
+    {
+      "id": "1 thes",
+      "name" : "1 Thessalonians"
+    },
+    {
+      "id": "2 thes",
+      "name" : "2 Thessalonians"
+    },
+    {
+      "id": "1 tm",
+      "name" : "1 Timothy"
+    },
+    {
+      "id": "2 tm",
+      "name" : "2 Timothy"
+    },
+    {
+      "id": "tit",
+      "name" : "Titus"
+    },
+    {
+      "id": "Phlm",
+      "name" : "Philemon"
+    },
+    {
+      "id": "hb",
+      "name" : "Hebrews"
+    },
+    {
+      "id": "Jas",
+      "name" : "James"
+    },
+    {
+      "id": "1 Pt",
+      "name" : "1 Peter"
+    },
+    {
+      "id": "2 Pt",
+      "name" : "2 Peter"
+    },
+    {
+      "id": "1 jhn",
+      "name" : "1 John"
+    },
+    {
+      "id": "2 jhn",
+      "name" : "2 John"
+    },
+    {
+      "id": "3 jhn",
+      "name" : "3 John"
+    },
+    {
+      "id": "jude",
+      "name" : "Jude"
+    },
+    {
+      "id": "rev",
+      "name" : "Revelation"
+    }
+  ],
+  "zh": [
+    {
+      "id": "gn",
+      "name" : "创世记"
+    },
+    {
+      "id": "ex",
+      "name" : "出埃及记"
+    },
+    {
+      "id": "lv",
+      "name" : "利未记"
+    },
+    {
+      "id": "nm",
+      "name" : "民数记"
+    },
+    {
+      "id": "dt",
+      "name" : "申命记"
+    },
+    {
+      "id": "js",
+      "name" : "约书亚记"
+    },
+    {
+      "id": "judg",
+      "name" : "士师记"
+    },
+    {
+      "id": "ru",
+      "name" : "路得记"
+    },
+    {
+      "id": "1 sm",
+      "name" : "撒母耳记上"
+    },
+    {
+      "id": "2 sm",
+      "name" : "撒母耳记下"
+    },
+    {
+      "id": "1 kgs",
+      "name" : "列王纪上"
+    },
+    {
+      "id": "2 kgs",
+      "name" : "列王纪下"
+    },
+    {
+      "id": "1 chr",
+      "name" : "历代志上"
+    },
+    {
+      "id": "2 chr",
+      "name" : "历代志下"
+    },
+    {
+      "id": "ezr",
+      "name" : "以斯拉记"
+    },
+    {
+      "id": "neh",
+      "name" : "尼希米记"
+    },
+    {
+      "id": "est",
+      "name" : "以斯帖记"
+    },
+    {
+      "id": "jb",
+      "name" : "约伯记"
+    },
+    {
+      "id": "ps",
+      "name" : "诗篇"
+    },
+    {
+      "id": "pv",
+      "name" : "箴言"
+    },
+    {
+      "id": "eccl",
+      "name" : "传道书"
+    },
+    {
+      "id": "sng",
+      "name" : "雅歌"
+    },
+    {
+      "id": "is",
+      "name" : "以赛亚书"
+    },
+    {
+      "id": "jer",
+      "name" : "耶利米书"
+    },
+    {
+      "id": "lam",
+      "name" : "耶利米哀歌"
+    },
+    {
+      "id": "ezek",
+      "name" : " 以西结书"
+    },
+    {
+      "id": "dan",
+      "name" : "但以理书"
+    },
+    {
+      "id": "hos",
+      "name" : "何西阿书"
+    },
+    {
+      "id": "jl",
+      "name" : "约珥书"
+    },
+    {
+      "id": "am",
+      "name" : "阿摩司书"
+    },
+    {
+      "id": "ob",
+      "name" : "俄巴底亚书"
+    },
+    {
+      "id": "jon",
+      "name" : "约拿书"
+    },
+    {
+      "id": "mi",
+      "name" : "弥迦书"
+    },
+    {
+      "id": "na",
+      "name" : "那鸿书"
+    },
+    {
+      "id": "hab",
+      "name" : "哈巴谷书"
+    },
+    {
+      "id": "zep",
+      "name" : "西番雅书"
+    },
+    {
+      "id": "hg",
+      "name" : "哈该书"
+    },
+    {
+      "id": "zec",
+      "name" : "撒迦利亚书"
+    },
+    {
+      "id": "mal",
+      "name" : "玛拉基书"
+    },
+    {
+      "id": "mt",
+      "name" : "马太福音"
+    },
+    {
+      "id": "mk",
+      "name" : "马可福音"
+    },
+    {
+      "id": "lk",
+      "name" : "路加福音"
+    },
+    {
+      "id": "jhn",
+      "name" : "约翰福音"
+    },
+    {
+      "id": "Acts",
+      "name" : "使徒行传"
+    },
+    {
+      "id": "rom",
+      "name" : "罗马书"
+    },
+    {
+      "id": "1 cor",
+      "name" : "哥林多前书"
+    },
+    {
+      "id": "2 cor",
+      "name" : "哥林多后书"
+    },
+    {
+      "id": "gal",
+      "name" : "加拉太书"
+    },
+    {
+      "id": "eph",
+      "name" : "以弗所书"
+    },
+    {
+      "id": "phil",
+      "name" : "腓立比书"
+    },
+    {
+      "id": "col",
+      "name" : "歌罗西书"
+    },
+    {
+      "id": "1 thes",
+      "name" : "帖撒罗尼迦前书"
+    },
+    {
+      "id": "2 thes",
+      "name" : "帖撒罗尼迦后书"
+    },
+    {
+      "id": "1 tm",
+      "name" : "提摩太前书"
+    },
+    {
+      "id": "2 tm",
+      "name" : " 提摩太后书"
+    },
+    {
+      "id": "tit",
+      "name" : "提多书"
+    },
+    {
+      "id": "Phlm",
+      "name" : "腓利门书"
+    },
+    {
+      "id": "hb",
+      "name" : "希伯来书"
+    },
+    {
+      "id": "Jas",
+      "name" : "雅各书"
+    },
+    {
+      "id": "1 Pt",
+      "name" : "彼得前书"
+    },
+    {
+      "id": "2 Pt",
+      "name" : "彼得后书"
+    },
+    {
+      "id": "1 jhn",
+      "name" : "约翰一书"
+    },
+    {
+      "id": "2 jhn",
+      "name" : "翰二书"
+    },
+    {
+      "id": "3 jhn",
+      "name" : "约翰三书"
+    },
+    {
+      "id": "jude",
+      "name" : "犹大书"
+    },
+    {
+      "id": "rev",
+      "name" : "启示录"
+    }
+  ],
+  "tw": [
+    {
+      "id": "gn",
+      "name" : "创世记"
+    },
+    {
+      "id": "ex",
+      "name" : "出埃及记"
+    },
+    {
+      "id": "lv",
+      "name" : "利未记"
+    },
+    {
+      "id": "nm",
+      "name" : "民数记"
+    },
+    {
+      "id": "dt",
+      "name" : "申命记"
+    },
+    {
+      "id": "js",
+      "name" : "约书亚记"
+    },
+    {
+      "id": "judg",
+      "name" : "士师记"
+    },
+    {
+      "id": "ru",
+      "name" : "路得记"
+    },
+    {
+      "id": "1 sm",
+      "name" : "撒母耳记上"
+    },
+    {
+      "id": "2 sm",
+      "name" : "撒母耳记下"
+    },
+    {
+      "id": "1 kgs",
+      "name" : "列王纪上"
+    },
+    {
+      "id": "2 kgs",
+      "name" : "列王纪下"
+    },
+    {
+      "id": "1 chr",
+      "name" : "历代志上"
+    },
+    {
+      "id": "2 chr",
+      "name" : "历代志下"
+    },
+    {
+      "id": "ezr",
+      "name" : "以斯拉记"
+    },
+    {
+      "id": "neh",
+      "name" : "尼希米记"
+    },
+    {
+      "id": "est",
+      "name" : "以斯帖记"
+    },
+    {
+      "id": "jb",
+      "name" : "约伯记"
+    },
+    {
+      "id": "ps",
+      "name" : "诗篇"
+    },
+    {
+      "id": "pv",
+      "name" : "箴言"
+    },
+    {
+      "id": "eccl",
+      "name" : "传道书"
+    },
+    {
+      "id": "sng",
+      "name" : "雅歌"
+    },
+    {
+      "id": "is",
+      "name" : "以赛亚书"
+    },
+    {
+      "id": "jer",
+      "name" : "耶利米书"
+    },
+    {
+      "id": "lam",
+      "name" : "耶利米哀歌"
+    },
+    {
+      "id": "ezek",
+      "name" : " 以西结书"
+    },
+    {
+      "id": "dan",
+      "name" : "但以理书"
+    },
+    {
+      "id": "hos",
+      "name" : "何西阿书"
+    },
+    {
+      "id": "jl",
+      "name" : "约珥书"
+    },
+    {
+      "id": "am",
+      "name" : "阿摩司书"
+    },
+    {
+      "id": "ob",
+      "name" : "俄巴底亚书"
+    },
+    {
+      "id": "jon",
+      "name" : "约拿书"
+    },
+    {
+      "id": "mi",
+      "name" : "弥迦书"
+    },
+    {
+      "id": "na",
+      "name" : "那鸿书"
+    },
+    {
+      "id": "hab",
+      "name" : "哈巴谷书"
+    },
+    {
+      "id": "zep",
+      "name" : "西番雅书"
+    },
+    {
+      "id": "hg",
+      "name" : "哈该书"
+    },
+    {
+      "id": "zec",
+      "name" : "撒迦利亚书"
+    },
+    {
+      "id": "mal",
+      "name" : "玛拉基书"
+    },
+    {
+      "id": "mt",
+      "name" : "马太福音"
+    },
+    {
+      "id": "mk",
+      "name" : "马可福音"
+    },
+    {
+      "id": "lk",
+      "name" : "路加福音"
+    },
+    {
+      "id": "jhn",
+      "name" : "约翰福音"
+    },
+    {
+      "id": "Acts",
+      "name" : "使徒行传"
+    },
+    {
+      "id": "rom",
+      "name" : "罗马书"
+    },
+    {
+      "id": "1 cor",
+      "name" : "哥林多前书"
+    },
+    {
+      "id": "2 cor",
+      "name" : "哥林多后书"
+    },
+    {
+      "id": "gal",
+      "name" : "加拉太书"
+    },
+    {
+      "id": "eph",
+      "name" : "以弗所书"
+    },
+    {
+      "id": "phil",
+      "name" : "腓立比书"
+    },
+    {
+      "id": "col",
+      "name" : "歌罗西书"
+    },
+    {
+      "id": "1 thes",
+      "name" : "帖撒罗尼迦前书"
+    },
+    {
+      "id": "2 thes",
+      "name" : "帖撒罗尼迦后书"
+    },
+    {
+      "id": "1 tm",
+      "name" : "提摩太前书"
+    },
+    {
+      "id": "2 tm",
+      "name" : " 提摩太后书"
+    },
+    {
+      "id": "tit",
+      "name" : "提多书"
+    },
+    {
+      "id": "Phlm",
+      "name" : "腓利门书"
+    },
+    {
+      "id": "hb",
+      "name" : "希伯来书"
+    },
+    {
+      "id": "Jas",
+      "name" : "雅各书"
+    },
+    {
+      "id": "1 Pt",
+      "name" : "彼得前书"
+    },
+    {
+      "id": "2 Pt",
+      "name" : "彼得后书"
+    },
+    {
+      "id": "1 jhn",
+      "name" : "约翰一书"
+    },
+    {
+      "id": "2 jhn",
+      "name" : "翰二书"
+    },
+    {
+      "id": "3 jhn",
+      "name" : "约翰三书"
+    },
+    {
+      "id": "jude",
+      "name" : "犹大书"
+    },
+    {
+      "id": "rev",
+      "name" : "启示录"
+    }
+  ],
+  "bs": [
+    {
+      "id": "gn",
+      "name" : "Genesis"
+    },
+    {
+      "id": "ex",
+      "name" : "Exodus"
+    },
+    {
+      "id": "lv",
+      "name" : "Leviticus"
+    },
+    {
+      "id": "nm",
+      "name" : "Numbers"
+    },
+    {
+      "id": "dt",
+      "name" : "Deuteronomy"
+    },
+    {
+      "id": "js",
+      "name" : "Joshua"
+    },
+    {
+      "id": "judg",
+      "name" : "Judges"
+    },
+    {
+      "id": "ru",
+      "name" : "Ruth"
+    },
+    {
+      "id": "1 sm",
+      "name" : "1 Samuel"
+    },
+    {
+      "id": "2 sm",
+      "name" : "2 Samuel"
+    },
+    {
+      "id": "1 kgs",
+      "name" : "1 Kings"
+    },
+    {
+      "id": "2 kgs",
+      "name" : "2 Kings"
+    },
+    {
+      "id": "1 chr",
+      "name" : "1 Chronicles"
+    },
+    {
+      "id": "2 chr",
+      "name" : "2 Chronicles"
+    },
+    {
+      "id": "ezr",
+      "name" : "Ezra"
+    },
+    {
+      "id": "neh",
+      "name" : "Nehemiah"
+    },
+    {
+      "id": "est",
+      "name" : "Esther"
+    },
+    {
+      "id": "jb",
+      "name" : "Job"
+    },
+    {
+      "id": "ps",
+      "name" : "Psalms"
+    },
+    {
+      "id": "pv",
+      "name" : "Proverbs"
+    },
+    {
+      "id": "eccl",
+      "name" : "Ecclesiastes"
+    },
+    {
+      "id": "sng",
+      "name" : "Song of Solomon"
+    },
+    {
+      "id": "is",
+      "name" : "Isaiah"
+    },
+    {
+      "id": "jer",
+      "name" : "Jeremiah"
+    },
+    {
+      "id": "lam",
+      "name" : "Lamentations"
+    },
+    {
+      "id": "ezek",
+      "name" : "Ezekiel"
+    },
+    {
+      "id": "dan",
+      "name" : "Daniel"
+    },
+    {
+      "id": "hos",
+      "name" : "Hosea"
+    },
+    {
+      "id": "jl",
+      "name" : "Joel"
+    },
+    {
+      "id": "am",
+      "name" : "Amos"
+    },
+    {
+      "id": "ob",
+      "name" : "Obadiah"
+    },
+    {
+      "id": "jon",
+      "name" : "Jonah"
+    },
+    {
+      "id": "mi",
+      "name" : "Micah"
+    },
+    {
+      "id": "na",
+      "name" : "Nahum"
+    },
+    {
+      "id": "hab",
+      "name" : "Habakkuk"
+    },
+    {
+      "id": "zep",
+      "name" : "Zephaniah"
+    },
+    {
+      "id": "hg",
+      "name" : "Haggai"
+    },
+    {
+      "id": "zec",
+      "name" : "Zechariah"
+    },
+    {
+      "id": "mal",
+      "name" : "Malachi"
+    },
+    {
+      "id": "mt",
+      "name" : "Matthew"
+    },
+    {
+      "id": "mk",
+      "name" : "Mark"
+    },
+    {
+      "id": "lk",
+      "name" : "Luke"
+    },
+    {
+      "id": "jhn",
+      "name" : "John"
+    },
+    {
+      "id": "Acts",
+      "name" : "Acts"
+    },
+    {
+      "id": "rom",
+      "name" : "Romans"
+    },
+    {
+      "id": "1 cor",
+      "name" : "1 Corinthians"
+    },
+    {
+      "id": "2 cor",
+      "name" : "2 Corinthians"
+    },
+    {
+      "id": "gal",
+      "name" : "Galatians"
+    },
+    {
+      "id": "eph",
+      "name" : "Ephesians"
+    },
+    {
+      "id": "phil",
+      "name" : "Philippians"
+    },
+    {
+      "id": "col",
+      "name" : "Colossians"
+    },
+    {
+      "id": "1 thes",
+      "name" : "1 Thessalonians"
+    },
+    {
+      "id": "2 thes",
+      "name" : "2 Thessalonians"
+    },
+    {
+      "id": "1 tm",
+      "name" : "1 Timothy"
+    },
+    {
+      "id": "2 tm",
+      "name" : "2 Timothy"
+    },
+    {
+      "id": "tit",
+      "name" : "Titus"
+    },
+    {
+      "id": "Phlm",
+      "name" : "Philemon"
+    },
+    {
+      "id": "hb",
+      "name" : "Hebrews"
+    },
+    {
+      "id": "Jas",
+      "name" : "James"
+    },
+    {
+      "id": "1 Pt",
+      "name" : "1 Peter"
+    },
+    {
+      "id": "2 Pt",
+      "name" : "2 Peter"
+    },
+    {
+      "id": "1 jhn",
+      "name" : "1 John"
+    },
+    {
+      "id": "2 jhn",
+      "name" : "2 John"
+    },
+    {
+      "id": "3 jhn",
+      "name" : "3 John"
+    },
+    {
+      "id": "jude",
+      "name" : "Jude"
+    },
+    {
+      "id": "rev",
+      "name" : "Revelation"
+    }
+  ],
+  "kr": [
+    {
+      "id": "gn",
+      "name" : "Genesis"
+    },
+    {
+      "id": "ex",
+      "name" : "Exodus"
+    },
+    {
+      "id": "lv",
+      "name" : "Leviticus"
+    },
+    {
+      "id": "nm",
+      "name" : "Numbers"
+    },
+    {
+      "id": "dt",
+      "name" : "Deuteronomy"
+    },
+    {
+      "id": "js",
+      "name" : "Joshua"
+    },
+    {
+      "id": "judg",
+      "name" : "Judges"
+    },
+    {
+      "id": "ru",
+      "name" : "Ruth"
+    },
+    {
+      "id": "1 sm",
+      "name" : "1 Samuel"
+    },
+    {
+      "id": "2 sm",
+      "name" : "2 Samuel"
+    },
+    {
+      "id": "1 kgs",
+      "name" : "1 Kings"
+    },
+    {
+      "id": "2 kgs",
+      "name" : "2 Kings"
+    },
+    {
+      "id": "1 chr",
+      "name" : "1 Chronicles"
+    },
+    {
+      "id": "2 chr",
+      "name" : "2 Chronicles"
+    },
+    {
+      "id": "ezr",
+      "name" : "Ezra"
+    },
+    {
+      "id": "neh",
+      "name" : "Nehemiah"
+    },
+    {
+      "id": "est",
+      "name" : "Esther"
+    },
+    {
+      "id": "jb",
+      "name" : "Job"
+    },
+    {
+      "id": "ps",
+      "name" : "Psalms"
+    },
+    {
+      "id": "pv",
+      "name" : "Proverbs"
+    },
+    {
+      "id": "eccl",
+      "name" : "Ecclesiastes"
+    },
+    {
+      "id": "sng",
+      "name" : "Song of Solomon"
+    },
+    {
+      "id": "is",
+      "name" : "Isaiah"
+    },
+    {
+      "id": "jer",
+      "name" : "Jeremiah"
+    },
+    {
+      "id": "lam",
+      "name" : "Lamentations"
+    },
+    {
+      "id": "ezek",
+      "name" : "Ezekiel"
+    },
+    {
+      "id": "dan",
+      "name" : "Daniel"
+    },
+    {
+      "id": "hos",
+      "name" : "Hosea"
+    },
+    {
+      "id": "jl",
+      "name" : "Joel"
+    },
+    {
+      "id": "am",
+      "name" : "Amos"
+    },
+    {
+      "id": "ob",
+      "name" : "Obadiah"
+    },
+    {
+      "id": "jon",
+      "name" : "Jonah"
+    },
+    {
+      "id": "mi",
+      "name" : "Micah"
+    },
+    {
+      "id": "na",
+      "name" : "Nahum"
+    },
+    {
+      "id": "hab",
+      "name" : "Habakkuk"
+    },
+    {
+      "id": "zep",
+      "name" : "Zephaniah"
+    },
+    {
+      "id": "hg",
+      "name" : "Haggai"
+    },
+    {
+      "id": "zec",
+      "name" : "Zechariah"
+    },
+    {
+      "id": "mal",
+      "name" : "Malachi"
+    },
+    {
+      "id": "mt",
+      "name" : "Matthew"
+    },
+    {
+      "id": "mk",
+      "name" : "Mark"
+    },
+    {
+      "id": "lk",
+      "name" : "Luke"
+    },
+    {
+      "id": "jhn",
+      "name" : "John"
+    },
+    {
+      "id": "Acts",
+      "name" : "Acts"
+    },
+    {
+      "id": "rom",
+      "name" : "Romans"
+    },
+    {
+      "id": "1 cor",
+      "name" : "1 Corinthians"
+    },
+    {
+      "id": "2 cor",
+      "name" : "2 Corinthians"
+    },
+    {
+      "id": "gal",
+      "name" : "Galatians"
+    },
+    {
+      "id": "eph",
+      "name" : "Ephesians"
+    },
+    {
+      "id": "phil",
+      "name" : "Philippians"
+    },
+    {
+      "id": "col",
+      "name" : "Colossians"
+    },
+    {
+      "id": "1 thes",
+      "name" : "1 Thessalonians"
+    },
+    {
+      "id": "2 thes",
+      "name" : "2 Thessalonians"
+    },
+    {
+      "id": "1 tm",
+      "name" : "1 Timothy"
+    },
+    {
+      "id": "2 tm",
+      "name" : "2 Timothy"
+    },
+    {
+      "id": "tit",
+      "name" : "Titus"
+    },
+    {
+      "id": "Phlm",
+      "name" : "Philemon"
+    },
+    {
+      "id": "hb",
+      "name" : "Hebrews"
+    },
+    {
+      "id": "Jas",
+      "name" : "James"
+    },
+    {
+      "id": "1 Pt",
+      "name" : "1 Peter"
+    },
+    {
+      "id": "2 Pt",
+      "name" : "2 Peter"
+    },
+    {
+      "id": "1 jhn",
+      "name" : "1 John"
+    },
+    {
+      "id": "2 jhn",
+      "name" : "2 John"
+    },
+    {
+      "id": "3 jhn",
+      "name" : "3 John"
+    },
+    {
+      "id": "jude",
+      "name" : "Jude"
+    },
+    {
+      "id": "rev",
+      "name" : "Revelation"
+    }
+  ],
+  "bi": [
+    {
+      "id": "gn",
+      "name" : "Genesis"
+    },
+    {
+      "id": "ex",
+      "name" : "Exodus"
+    },
+    {
+      "id": "lv",
+      "name" : "Leviticus"
+    },
+    {
+      "id": "nm",
+      "name" : "Numbers"
+    },
+    {
+      "id": "dt",
+      "name" : "Deuteronomy"
+    },
+    {
+      "id": "js",
+      "name" : "Joshua"
+    },
+    {
+      "id": "judg",
+      "name" : "Judges"
+    },
+    {
+      "id": "ru",
+      "name" : "Ruth"
+    },
+    {
+      "id": "1 sm",
+      "name" : "1 Samuel"
+    },
+    {
+      "id": "2 sm",
+      "name" : "2 Samuel"
+    },
+    {
+      "id": "1 kgs",
+      "name" : "1 Kings"
+    },
+    {
+      "id": "2 kgs",
+      "name" : "2 Kings"
+    },
+    {
+      "id": "1 chr",
+      "name" : "1 Chronicles"
+    },
+    {
+      "id": "2 chr",
+      "name" : "2 Chronicles"
+    },
+    {
+      "id": "ezr",
+      "name" : "Ezra"
+    },
+    {
+      "id": "neh",
+      "name" : "Nehemiah"
+    },
+    {
+      "id": "est",
+      "name" : "Esther"
+    },
+    {
+      "id": "jb",
+      "name" : "Job"
+    },
+    {
+      "id": "ps",
+      "name" : "Psalms"
+    },
+    {
+      "id": "pv",
+      "name" : "Proverbs"
+    },
+    {
+      "id": "eccl",
+      "name" : "Ecclesiastes"
+    },
+    {
+      "id": "sng",
+      "name" : "Song of Solomon"
+    },
+    {
+      "id": "is",
+      "name" : "Isaiah"
+    },
+    {
+      "id": "jer",
+      "name" : "Jeremiah"
+    },
+    {
+      "id": "lam",
+      "name" : "Lamentations"
+    },
+    {
+      "id": "ezek",
+      "name" : "Ezekiel"
+    },
+    {
+      "id": "dan",
+      "name" : "Daniel"
+    },
+    {
+      "id": "hos",
+      "name" : "Hosea"
+    },
+    {
+      "id": "jl",
+      "name" : "Joel"
+    },
+    {
+      "id": "am",
+      "name" : "Amos"
+    },
+    {
+      "id": "ob",
+      "name" : "Obadiah"
+    },
+    {
+      "id": "jon",
+      "name" : "Jonah"
+    },
+    {
+      "id": "mi",
+      "name" : "Micah"
+    },
+    {
+      "id": "na",
+      "name" : "Nahum"
+    },
+    {
+      "id": "hab",
+      "name" : "Habakkuk"
+    },
+    {
+      "id": "zep",
+      "name" : "Zephaniah"
+    },
+    {
+      "id": "hg",
+      "name" : "Haggai"
+    },
+    {
+      "id": "zec",
+      "name" : "Zechariah"
+    },
+    {
+      "id": "mal",
+      "name" : "Malachi"
+    },
+    {
+      "id": "mt",
+      "name" : "Matthew"
+    },
+    {
+      "id": "mk",
+      "name" : "Mark"
+    },
+    {
+      "id": "lk",
+      "name" : "Luke"
+    },
+    {
+      "id": "jhn",
+      "name" : "John"
+    },
+    {
+      "id": "Acts",
+      "name" : "Acts"
+    },
+    {
+      "id": "rom",
+      "name" : "Romans"
+    },
+    {
+      "id": "1 cor",
+      "name" : "1 Corinthians"
+    },
+    {
+      "id": "2 cor",
+      "name" : "2 Corinthians"
+    },
+    {
+      "id": "gal",
+      "name" : "Galatians"
+    },
+    {
+      "id": "eph",
+      "name" : "Ephesians"
+    },
+    {
+      "id": "phil",
+      "name" : "Philippians"
+    },
+    {
+      "id": "col",
+      "name" : "Colossians"
+    },
+    {
+      "id": "1 thes",
+      "name" : "1 Thessalonians"
+    },
+    {
+      "id": "2 thes",
+      "name" : "2 Thessalonians"
+    },
+    {
+      "id": "1 tm",
+      "name" : "1 Timothy"
+    },
+    {
+      "id": "2 tm",
+      "name" : "2 Timothy"
+    },
+    {
+      "id": "tit",
+      "name" : "Titus"
+    },
+    {
+      "id": "Phlm",
+      "name" : "Philemon"
+    },
+    {
+      "id": "hb",
+      "name" : "Hebrews"
+    },
+    {
+      "id": "Jas",
+      "name" : "James"
+    },
+    {
+      "id": "1 Pt",
+      "name" : "1 Peter"
+    },
+    {
+      "id": "2 Pt",
+      "name" : "2 Peter"
+    },
+    {
+      "id": "1 jhn",
+      "name" : "1 John"
+    },
+    {
+      "id": "2 jhn",
+      "name" : "2 John"
+    },
+    {
+      "id": "3 jhn",
+      "name" : "3 John"
+    },
+    {
+      "id": "jude",
+      "name" : "Jude"
+    },
+    {
+      "id": "rev",
+      "name" : "Revelation"
+    }
+  ],
+  "bm": [
+    {
+      "id": "gn",
+      "name" : "Genesis"
+    },
+    {
+      "id": "ex",
+      "name" : "Exodus"
+    },
+    {
+      "id": "lv",
+      "name" : "Leviticus"
+    },
+    {
+      "id": "nm",
+      "name" : "Numbers"
+    },
+    {
+      "id": "dt",
+      "name" : "Deuteronomy"
+    },
+    {
+      "id": "js",
+      "name" : "Joshua"
+    },
+    {
+      "id": "judg",
+      "name" : "Judges"
+    },
+    {
+      "id": "ru",
+      "name" : "Ruth"
+    },
+    {
+      "id": "1 sm",
+      "name" : "1 Samuel"
+    },
+    {
+      "id": "2 sm",
+      "name" : "2 Samuel"
+    },
+    {
+      "id": "1 kgs",
+      "name" : "1 Kings"
+    },
+    {
+      "id": "2 kgs",
+      "name" : "2 Kings"
+    },
+    {
+      "id": "1 chr",
+      "name" : "1 Chronicles"
+    },
+    {
+      "id": "2 chr",
+      "name" : "2 Chronicles"
+    },
+    {
+      "id": "ezr",
+      "name" : "Ezra"
+    },
+    {
+      "id": "neh",
+      "name" : "Nehemiah"
+    },
+    {
+      "id": "est",
+      "name" : "Esther"
+    },
+    {
+      "id": "jb",
+      "name" : "Job"
+    },
+    {
+      "id": "ps",
+      "name" : "Psalms"
+    },
+    {
+      "id": "pv",
+      "name" : "Proverbs"
+    },
+    {
+      "id": "eccl",
+      "name" : "Ecclesiastes"
+    },
+    {
+      "id": "sng",
+      "name" : "Song of Solomon"
+    },
+    {
+      "id": "is",
+      "name" : "Isaiah"
+    },
+    {
+      "id": "jer",
+      "name" : "Jeremiah"
+    },
+    {
+      "id": "lam",
+      "name" : "Lamentations"
+    },
+    {
+      "id": "ezek",
+      "name" : "Ezekiel"
+    },
+    {
+      "id": "dan",
+      "name" : "Daniel"
+    },
+    {
+      "id": "hos",
+      "name" : "Hosea"
+    },
+    {
+      "id": "jl",
+      "name" : "Joel"
+    },
+    {
+      "id": "am",
+      "name" : "Amos"
+    },
+    {
+      "id": "ob",
+      "name" : "Obadiah"
+    },
+    {
+      "id": "jon",
+      "name" : "Jonah"
+    },
+    {
+      "id": "mi",
+      "name" : "Micah"
+    },
+    {
+      "id": "na",
+      "name" : "Nahum"
+    },
+    {
+      "id": "hab",
+      "name" : "Habakkuk"
+    },
+    {
+      "id": "zep",
+      "name" : "Zephaniah"
+    },
+    {
+      "id": "hg",
+      "name" : "Haggai"
+    },
+    {
+      "id": "zec",
+      "name" : "Zechariah"
+    },
+    {
+      "id": "mal",
+      "name" : "Malachi"
+    },
+    {
+      "id": "mt",
+      "name" : "Matthew"
+    },
+    {
+      "id": "mk",
+      "name" : "Mark"
+    },
+    {
+      "id": "lk",
+      "name" : "Luke"
+    },
+    {
+      "id": "jhn",
+      "name" : "John"
+    },
+    {
+      "id": "Acts",
+      "name" : "Acts"
+    },
+    {
+      "id": "rom",
+      "name" : "Romans"
+    },
+    {
+      "id": "1 cor",
+      "name" : "1 Corinthians"
+    },
+    {
+      "id": "2 cor",
+      "name" : "2 Corinthians"
+    },
+    {
+      "id": "gal",
+      "name" : "Galatians"
+    },
+    {
+      "id": "eph",
+      "name" : "Ephesians"
+    },
+    {
+      "id": "phil",
+      "name" : "Philippians"
+    },
+    {
+      "id": "col",
+      "name" : "Colossians"
+    },
+    {
+      "id": "1 thes",
+      "name" : "1 Thessalonians"
+    },
+    {
+      "id": "2 thes",
+      "name" : "2 Thessalonians"
+    },
+    {
+      "id": "1 tm",
+      "name" : "1 Timothy"
+    },
+    {
+      "id": "2 tm",
+      "name" : "2 Timothy"
+    },
+    {
+      "id": "tit",
+      "name" : "Titus"
+    },
+    {
+      "id": "Phlm",
+      "name" : "Philemon"
+    },
+    {
+      "id": "hb",
+      "name" : "Hebrews"
+    },
+    {
+      "id": "Jas",
+      "name" : "James"
+    },
+    {
+      "id": "1 Pt",
+      "name" : "1 Peter"
+    },
+    {
+      "id": "2 Pt",
+      "name" : "2 Peter"
+    },
+    {
+      "id": "1 jhn",
+      "name" : "1 John"
+    },
+    {
+      "id": "2 jhn",
+      "name" : "2 John"
+    },
+    {
+      "id": "3 jhn",
+      "name" : "3 John"
+    },
+    {
+      "id": "jude",
+      "name" : "Jude"
+    },
+    {
+      "id": "rev",
+      "name" : "Revelation"
+    }
+  ]
+}

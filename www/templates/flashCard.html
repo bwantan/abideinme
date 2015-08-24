@@ -1,0 +1,58 @@
+<ion-view ng-init="init()" ng-controller="flipCardCtrl" hide-nav-bar="true">
+  <ion-nav-title>
+    {{ "FLASH_CARD.1" | translate }}
+  </ion-nav-title>
+  <ion-nav-buttons side="left">
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+  </ion-nav-buttons>
+  <ion-header-bar class="subheader">
+    <div class="buttons">
+    </div>
+    <div class="title centerButtons">
+        Flash Card
+    </div>
+    <div class="buttons">
+      <span class="padding"></span>
+
+    </div>
+  </ion-header-bar>
+  <ion-content scroll="false">
+    <ion-pane>
+      <swipe-cards ng-if="verses.length > 0">
+        <swipe-card class="main_card"
+                    ng-repeat="verse in verses track by $index" on-destroy="cardDestroyed(verse, $index)" style="height:80%;top:200px">
+          <div on-tap="flipCard(verse)" style="font-size:24px;height:700px;vertical-align: middle" ng-if="!verse.show">
+            {{ verse.reference}}
+            <span style="font-size:12px">{{ verse.version }}</span>
+          </div>
+          <table width="100%" ng-if="verse.show">
+            <tr>
+              <td>
+                <ion-content on-tap="flipCard(verse)" has-bouncing="true" overflow:auto>
+                  <div  class="verse-passage item-text-wrap padding"
+                       style="line-height: 110%;font-size:{{ settings.fontSize }}px">
+                    <div style="padding-bottom: 2px"><b>{{ verse.reference}}</b> <span style="font-size:12px">{{ verse.version }}</span></div><br>
+                    {{ verse.passage }}
+                  </div>
+                  <div style="border:0;background: transparent;" class="item"></div>
+                </ion-content>
+                <div style="position: fixed;bottom: 0px;z-index:999;background-color:#ffffff" class="button-bar">
+                  <button class="button button-clear button-positive" class="" ng-click="correctAnswer(verse, $index)">{{ "FLASH_CARD.2" | translate }}</button>
+                  <button class="button button-clear button-positive" ng-click="wrongAnswer(verse, $index)">{{ "FLASH_CARD.3" | translate }}</button>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </swipe-card>
+      </swipe-cards>
+      </ion-pane>
+  </ion-content>
+  <ion-footer-bar class="bar-light">
+    <div class="title"></div>
+    <div class="buttons">
+      <button class="button button-positive button-icon button-clear ion-ios-close-outline" on-tap="done()">
+      </button>
+    </div>
+    </ion-footer-bar>
+</ion-view>

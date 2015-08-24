@@ -1,0 +1,81 @@
+<ion-view ng-init="init()" ng-controller="addNewCtrl" can-swipe-back="true">
+  <ion-nav-title>
+    {{ "ADD_NEW.1" | translate }}
+  </ion-nav-title>
+  <ion-nav-buttons side="left">
+    <button class="button button-icon button-clear button-small ion-ios-help-outline" on-tap="videoHelp()"></button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+      <button class="button button-icon button-clear " on-tap="saveVerses()">{{ "ADD_NEW.2" | translate }}
+    </button>
+  </ion-nav-buttons>
+  <ion-header-bar class="bar-light bar-subheader item-input-inset">
+    <div class="buttons">
+      <button class="button button-clear button-positive button-small" on-tap="showAllBooks()">
+        <i class="icon ion-ios-book-outline"></i>
+      </button>
+    </div>
+    <label class="item-input-wrapper">
+      <i class="icon ion-ios-search placeholder-icon"></i>
+      <input type="text" autocorrect="off" ng-focus="searchFocused = true"
+             ng-blur="true" ng-change="typeSearch()" placeholder="{{ 'ADD_NEW.3' | translate }}" id="reference" autocomplete="off" ng-model="verse.reference" ng-Enter="findVerse()">
+    </label>
+    <span class="item-note padding-right"></span>
+    <div class="buttons">
+      <button ng-show="verse.reference;" class="button button-clear button-positive button-small" on-tap="clearVerse()">
+        <i class="icon ion-ios-close-outline"></i>
+      </button>
+    </div>
+
+  </ion-header-bar>
+  <ion-content on-tap="contentTap()" delegate-handle="contentHandle">
+    <div ng-if="verse.reference || showSearchResult" ng-class="showSearchResult ? 'autocomplete':'noshow'">
+      <ion-item href=""# ng-repeat="book in books[settings.bibleLanguage] | filter:verse.reference:strict" on-tap="selectBook(book.name)">
+        {{ book.name }}
+      </ion-item>
+    </div>
+    <div class="item item-body" style="border:0" ng-if="newVerses.length == 0">
+      <p>
+        {{ 'ADD_NEW.4' | translate }}
+      </p>
+    </div>
+    <ion-list ng-if="newVerses.length > 0" delegate-handle="verseHandle">
+      <ion-item style="border:0px">
+        <div class="card" ng-repeat="newVerse in newVerses | orderBy:'$index':false">
+          <div class="item item-divider" >
+            <table style="width:100%">
+              <tr>
+                <td style="text-align: left;width: 70%;">
+                  {{ newVerse.reference }} <span style="font-weight: normal;font-size:10px; font-style: italic">(Source: {{ newVerse.version }})</span>
+                </td>
+                <td style="text-align: right;">
+                  <a>
+                    <i class="icon ion-minus-circled button-assertive button button-clear button-small" style="font-size:20px" on-tap="newVerses.splice($index, 1)"></i>
+                  </a>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="item item-text-wrap" ng-bind-html="newVerse.passage" style="line-height: 110%;font-size:{{ settings.fontSize }}px">
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  <ion-footer-bar class="bar-light item-input-inset" keyboard-attach>
+    <div class="buttons">
+      <button class="button button-light" on-tap="selectBible()">
+        {{ settings.bibleVersion }}
+        <i class="ion-arrow-down-b"></i>
+      </button>
+    </div>
+    <div class="title">
+
+    </div>
+    <div class="buttons">
+      <button class="button button-clear button-positive" on-tap="findVerse()">
+        <i class="icon ion-ios-search"></i>
+      </button>
+      </div>
+  </ion-footer-bar>
+</ion-view>

@@ -1,0 +1,54 @@
+{
+  "en": [
+    { "text": "Bible Language", "value": "BOONWAN" , "number":0},
+    { "text": "New King James Version (NKJV)", "value": "NKJV", "number":114},
+    { "text": "King James Version (KJV)", "value": "KJV" , "number":1},
+    { "text": "Amplified Version (AMP)", "value": "AMP" , "number":8},
+    { "text": "American Standard Version (ASV)", "value": "ASV" , "number":12},
+    { "text": "New International Version (NIV)", "value": "NIV" , "number":111},
+    { "text": "New American Standard Bible (NASB)", "value": "NASB" , "number":100},
+    { "text": "English Standard Version (ESV)", "value": "ESV" , "number":59},
+    { "text": "New Living Translation (NLT)", "value": "NLT" , "number":116},
+    { "text": "The Message (MSG)", "value": "MSG" , "number":97},
+    { "text": "World English Bible (WEB)", "value": "WEB" , "number":206},
+    { "text": "Common English Bible (CEB)", "value": "CEB" , "number":37}
+
+  ],
+  "zh": [
+    { "text": "圣经语言", "value": "BOONWAN" , "number":0},
+    { "text": "圣经当代译本修订版 (CCB)", "value": "CCB" , "number":36},
+    { "text": "新译本 (CNVS)", "value": "CNVS" , "number":41},
+    { "text": "中文标准译本 (CSBS)", "value": "CSBS", "number":43}
+  ],
+  "tw": [
+    { "text": "圣经语言", "value": "BOONWAN" , "number":0},
+    { "text": "新譯本 (CNV)", "value": "CNV" , "number":40},
+    { "text": "中文標準譯本 (CSBT)", "value": "CSBT" , "number":312}
+  ],
+  "ds": [
+    { "text": "Bible Language", "value": "BOONWAN" , "number":0},
+    { "text": "Buuk Do Kinorohingan (BDK)", "value": "BDK" , "number":172}
+  ],
+  "bi": [
+    { "text": "Bible Language", "value": "BOONWAN" , "number":0},
+    { "text": "Alkitab Terjemahan Baru (TB)", "value": "TB" , "number":306},
+    { "text": "Alkitab dalam Bahasa Indonesia Masa Kini (BIMK)", "value": "BIMK" , "number":199},
+    { "text": "Perjanjian Baru:Versi Mudah Dibaca (AMD)", "value": "BIMK" , "number":27},
+    { "text": "Terjemahan Sederhana Indonesia (TSI)", "value": "TSI" , "number":320}
+  ],
+  "bm": [
+    { "text": "Bible Language", "value": "BOONWAN" , "number":0},
+    { "text": "Alkitab Berita Baik (BM)", "value": "BM" , "number":402},
+    { "text": "Alkitab Berita Baik (+Deuterokanonika) (BMDC)", "value": "BMDC" , "number":377}
+  ],
+  "kr": [
+    { "text": "Bible Language", "value": "BOONWAN" , "number":0},
+    { "text": "현대인의 성경 (KLB)", "value": "KLB" , "number":86},
+    { "text": "개역한글 (KRV)", "value": "KRV" , "number":88},
+    { "text": "새번역 (RNKSV)", "value": "RNKSV" , "number":142}
+  ]
+}
+
+
+
+

@@ -1,0 +1,30 @@
+{
+    "COMMON":
+    {
+        "SELECT":
+        {
+            "LANGUAGE":
+            {
+                "ENGLISH": "Inggeris",
+                "MALAY": "Malayu",
+                "CHINESE": "Cina"
+            }
+        }
+    },
+    "TAB": {
+        "PETS": "Haiwan",
+        "ADOPT": "Menerima",
+        "ABOUT": "Tentang"
+    },
+    "LOGIN":
+    {
+        "TITLE": "Log Masuk",
+        "LABEL": {
+            "USERNAME": "Nama Pengguna",
+            "PASSWORD": "Kata Laluan"
+        },
+        "BUTTON": {
+            "LOGIN": "Log Masuk"
+        }
+    }
+}

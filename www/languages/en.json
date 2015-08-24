@@ -1,0 +1,70 @@
+{
+    "MENU": {
+        "Title": "Memory Verse",
+        "Verses": "Verses",
+        "Account": "Account",
+        "Settings": "Settings",
+        "Help": "Help",
+        "About": "About",
+        "Back": "Back",
+        "Done": "Done",
+        "Cancel":"Cancel",
+        "SelectLanguage":"Select Bible Language",
+        "SelectBible":"Select Bible Version",
+        "Default":"Default",
+        "General":"General",
+        "Practice":"Practice"
+    },
+    "VERSE_LIST": {
+        "1": "Favourite",
+        "2": "New",
+        "3": "Due",
+        "4": "Known",
+        "5": "All",
+        "6": "Edit",
+        "7": "Done",
+        "8": "Search verse",
+        "9": "Delete",
+        "10": "More",
+        "11": "Share",
+        "12": "Favourite",
+        "13": "Cancel",
+        "14": "Source",
+        "15": "Study Verse",
+        "16": "Move Left",
+        "17": "Move Right"
+    },
+    "ADD_NEW": {
+        "1": "Add New",
+        "2": "Save",
+        "3": "eg. John 8:31-32",
+        "4": "You can search and add multiple verses to the list. Once you have confirmed all the new verses,tap [Save] button to save them to your verse list."
+
+    },
+    "CHANGE_FONT": {
+        "1": "Font Size",
+        "2": "Show Verse",
+        "3": "Default"
+    },
+    "SETTINGS": {
+        "1": "Language",
+        "2": "Bible",
+        "3": "Show Verse",
+        "4": "Font Size",
+        "5": "Practice",
+        "6": "Starting Consecutive Repeat (Days)",
+        "7": "The number of consecutive days in initial commit",
+        "8": "Followed by (Days) for repeat cycle",
+        "9": "The number of days before the verse repeat again",
+        "10": "General"
+    },
+    "FLASH_CARD": {
+        "1": "Flash Card",
+        "2": "Correct",
+        "3": "Wrong",
+        "4": "verse(s)"
+    },
+    "VERSE": {
+        "1": "Read Chapter"
+    }
+}
